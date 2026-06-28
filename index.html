@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Contract Red Flag Detector</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <i class="fa-solid fa-file-shield"></i>
+            <span>AI Contract Detector</span>
+        </div>
+
+        <div class="nav-right">
+
+            <button id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <h1>AI Contract Red Flag Detector</h1>
+
+        <p>
+            Paste any legal agreement, employment contract,
+            NDA, rental agreement, freelancer contract or
+            Terms & Conditions.
+            Our AI will automatically detect risky clauses,
+            hidden penalties and important warnings.
+        </p>
+
+    </section>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+        <!-- LEFT PANEL -->
+
+        <section class="left-panel">
+
+            <div class="card">
+
+                <h2>
+                    <i class="fa-solid fa-file-lines"></i>
+                    Paste Contract
+                </h2>
+
+                <textarea
+                    id="contractInput"
+                    placeholder="Paste your contract here..."></textarea>
+
+                <div class="buttons">
+
+                    <button id="analyzeBtn" class="primary">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Analyze Contract
+
+                    </button>
+
+                    <button id="clearBtn">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Clear
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- RIGHT PANEL -->
+
+        <section class="right-panel">
+
+            <!-- SCORE -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    Risk Score
+
+                </h2>
+
+                <div class="risk-score">
+
+                    <div class="circle">
+
+                        <span id="scoreValue">0</span>
+
+                        <small>%</small>
+
+                    </div>
+
+                    <p id="riskText">
+
+                        Waiting for Analysis...
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- FLAGS -->
+
+            <div class="card">
+
+                <h2>
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    Red Flags
+
+                </h2>
+
+                <ul id="flagsList">
+
+                    <li>
+
+                        No contract analyzed yet.
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- ================= KEYWORDS ================= -->
+
+    <section class="keywords">
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-tags"></i>
+
+                Detected Risk Keywords
+
+            </h2>
+
+            <div id="keywordContainer">
+
+                <span class="keyword">
+
+                    None
+
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= CLAUSES ================= -->
+
+    <section class="clauses">
+
+        <div class="card">
+
+            <h2>
+
+                <i class="fa-solid fa-scale-balanced"></i>
+
+                Clause Breakdown
+
+            </h2>
+
+            <div id="clauseContainer">
+
+                <div class="clause">
+
+                    Analyze a contract to see detailed clause explanation.
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= LOADING ================= -->
+
+    <div id="loadingOverlay">
+
+        <div class="loader">
+
+            <div class="spinner"></div>
+
+            <p>
+
+                AI is analyzing your contract...
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+
+            Built with HTML, CSS & JavaScript |
+            AI Contract Red Flag Detector
+
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
